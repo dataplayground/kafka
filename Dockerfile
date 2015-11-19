@@ -4,6 +4,8 @@ MAINTAINER geoHeil
 
 ENV KAFKA_VERSION="0.8.2.2" SCALA_VERSION="2.11"
 
+RUN apt-get update && apt-get install -y unzip wget curl git docker.io jq
+
 ADD download-kafka.sh /tmp/download-kafka.sh
 RUN /tmp/download-kafka.sh
 RUN tar xf /tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz -C /opt
