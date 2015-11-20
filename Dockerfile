@@ -7,7 +7,7 @@ ENV SCALA_VERSION="2.11"
 ENV KAFKA_VERSION="0.8.2.2"
 ENV KAFKA_HOME /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
 
-RUN apt-get update && apt-get install -y unzip wget curl git docker.io jq
+RUN apt-get update && apt-get install -y unzip wget curl git docker.io jq netstat
 
 ADD download-kafka.sh /tmp/download-kafka.sh
 RUN /tmp/download-kafka.sh
