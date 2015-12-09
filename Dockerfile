@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 
 MAINTAINER geoHeil 
 
-ENV KAFKA_VERSION=„0.9.0.0“ SCALA_VERSION="2.11“
+ENV KAFKA_VERSION=„0.9.0.0“ SCALA_VERSION="2.10“
 
 RUN apt-get update && apt-get install -y unzip openjdk-6-jdk wget curl git docker.io jq
 
